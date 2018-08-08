@@ -1,7 +1,14 @@
 {
-    "name": "blogPostApp",
+    "name": "blog-post-app",
     "version": "1.0.0",
     "scripts": {
         "start": "node server.js"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "mongoose": "^5.2.7",
+        "nodemon": "^1.18.3"
     }
 }
