@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const config = require('./config/config.js');
 
 // var mongoose = require('mongoose');
 // var morgan = require('morgan');
@@ -20,12 +21,12 @@ const bodyParser = require('body-parser');
 
 // });
 
-mongoose.connect("mongodb://localhost:27017/blogPostNode")
+mongoose.connect(config.db)
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.listen(3000, (err) => {
+app.listen(config.port, (err) => {
     if (err) throw err;
     console.log("Listening at 3000")
 });
